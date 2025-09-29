@@ -2,12 +2,6 @@ import clsx from "clsx";
 import { useEffect, useState } from "react";
 import { Link as LinkScroll } from "react-scroll";
 
-const NavLink = ({ title }) => (
-  <LinkScroll className="base-bold text-p4 uppercase transition-colors duration-500 cursor-pointer hover:text-p1 max-lg:my-4 max-lg:h5">
-    {title}
-  </LinkScroll>
-);
-
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
@@ -23,6 +17,20 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [hasScrolled]);
+
+  const NavLink = ({ title }) => (
+    <LinkScroll
+      to={title}
+      offset={-100}
+      spy
+      smooth
+      activeClass="nav-active"
+      onClick={() => setIsOpen(false)}
+      className="base-bold text-p4 uppercase transition-colors duration-500 cursor-pointer hover:text-p1 max-lg:my-4 max-lg:h5"
+    >
+      {title}
+    </LinkScroll>
+  );
 
   return (
     <header
@@ -46,7 +54,7 @@ const Header = () => {
             <nav className="max-lg:relative max-lg:z-2 max-lg:my-auto">
               <ul className="flex max-lg:block max-lg:px-12">
                 <li className="nav-li">
-                  <NavLink title="features" />
+                  <NavLink title="features" to="features" />
                   <div className="dot" />
                   <NavLink title="pricing" />
                 </li>
@@ -54,7 +62,7 @@ const Header = () => {
                 <li className="nav-logo">
                   <LinkScroll
                     to="hero"
-                    offset={-100}
+                    offset={-250}
                     spy
                     smoth
                     className={clsx(
