@@ -20,12 +20,10 @@ function FaqItem({ item, index }) {
             {index < 10 ? "0" : ""} {index}
           </div>
           <div
-            className={
-              (clsx(
-                "h6 text-p4 transition-colors duration-500 max-md:flex max-md:min-h-20 max-md:items-center"
-              ),
-              isActive && "max-lg:text-p1")
-            }
+            className={clsx(
+              "h6 text-p4 transition-colors duration-500 max-md:flex max-md:min-h-20 max-md:items-center",
+              isActive && "max-lg:text-p1"
+            )}
           >
             {item.question}
           </div>
@@ -37,7 +35,7 @@ function FaqItem({ item, index }) {
             isActive && "before:bg-p1 after:rotate-0 after:bg-p1"
           )}
         >
-          <div className="g4 size-11/12 rounded-full shadow-300"></div>
+          <div className="g4 size-11/12 rounded-full shadow-300" />
         </div>
       </div>
 
@@ -54,10 +52,9 @@ function FaqItem({ item, index }) {
         )}
       >
         <div className="g4 absolute inset-0.5 -z-1 rounded-3xl" />
-        <div className="absolute left-8 top-8 h-0.5 w-40 bg-p1" />
+        <div className="absolute left-8 top-0 h-0.5 w-40 bg-p1" />
       </div>
     </div>
   );
 }
-
 export default FaqItem;
