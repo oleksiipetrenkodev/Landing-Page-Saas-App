@@ -7,9 +7,9 @@ import Pricing from "./sections/Pricing";
 const App = () => {
   return (
     <main className="overflow-hidden">
-      <Header />
+      {/* <Header />
       <Hero />
-      <Features />
+      <Features /> */}
       <Pricing />
     </main>
   );
