@@ -64,7 +64,7 @@ const Header = () => {
                     to="hero"
                     offset={-250}
                     spy
-                    smoth
+                    smooth
                     className={clsx(
                       "max-lg:hidden transition-transform duration-600 cursor-pointer"
                     )}
@@ -110,7 +110,7 @@ const Header = () => {
           className="lg:hidden z-2 size-10 border-2 border-s4/25 rounded-full flex justify-center items-center"
         >
           <img
-            src={`/images/${isOpen ? "close" : "magic"}.svg`}
+            src={`images/${isOpen ? "close" : "magic"}.svg`}
             alt="menu"
             className="size-1/2 object-contain"
           />

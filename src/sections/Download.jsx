@@ -3,8 +3,6 @@ import { links, logos } from "../constants/index.jsx";
 import Marker from "../components/Marker.jsx";
 
 const Download = () => {
-  console.log(11);
-
   return (
     <section>
       <Element
